@@ -178,12 +178,6 @@ function main_view_function(dates) {
     for (let i = 0; i < elements.length; i++) {
       elements[i].addEventListener("click", click_handler);
     }
-    document
-      .querySelector(".back_button_second")
-      .addEventListener("click", () => {
-        set_time(date);
-        temp_choice = {};
-      });
   }
 
   // Кнопки время
@@ -201,11 +195,6 @@ function main_view_function(dates) {
     time_view.style.display = "block";
 
     document.querySelector(".time_header_1").innerHTML = date;
-    document
-      .querySelector(".back_button_first")
-      .addEventListener("click", () => {
-        make_calendar();
-      });
     document.querySelector(".avalibal_time").innerHTML = "";
 
     const time_data = dates[date];
