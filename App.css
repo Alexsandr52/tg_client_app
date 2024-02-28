@@ -163,7 +163,7 @@ body{
 
 .display{
   width: 100%;
-  background-color: var(--tg-theme-button-text-color);
+  background-color: var(--tg-theme-button-color);
   height: 3px;
   border-radius: 3px;
   margin-bottom: 60px;
