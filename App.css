@@ -163,8 +163,10 @@ body{
 
 .display{
   width: 100%;
-  background-color: var(--tg-theme-button-color);
   height: 3px;
+
+  margin: 10px;
+  background-color: var(--tg-theme-button-color);
   border-radius: 3px;
   margin-bottom: 60px;
 }
@@ -205,8 +207,7 @@ button{
   min-height: 50px;
   border: 0px solid black;
   border-radius: 50px;
-  transition: background-color 0.3s ease; 
-
+  transition: background-color 0.3s ease;
 }
 
 button:hover{
