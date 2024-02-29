@@ -235,6 +235,7 @@ function date_set_func(dates){
   // Календарь
   function make_calendar() {
     temp_choice = {};
+    main_button_checkout();
     tg.BackButton.hide();
 
     change_view_mode("calendar_view");
@@ -334,8 +335,11 @@ function date_set_func(dates){
     change_view_mode('prise-list');
     
     const cart_body = document.querySelector('prise-list');
-    cart_body.querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${tg.initDataUnsafe.user.id}`;
+    cart_body.querySelector('.time_header_1').innerHTML = `${tg.initDataUnsafe.user.first_name}`;
 
+    for (let i = 0; i < 30; i++){
+        cart_body.querySelector('list-items').innerHTML += `<div>${i}</div>`
+    }
   }
   
   date_set_func(dates)
