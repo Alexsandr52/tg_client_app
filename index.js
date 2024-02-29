@@ -63,6 +63,8 @@ function main_button_checkout(temp_choice) {
     if (Object.keys(temp_choice).length != 0) {
         if (!tg.MainButton.isVisible) {
             tg.enableClosingConfirmation();
+            tg.MainButton.text = "Продолжить";
+            tg.MainButton.onClick(make_price_list);
             tg.MainButton.show();
         }
     } else {
