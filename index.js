@@ -341,10 +341,10 @@ function date_set_func(dates){
     price = 0;
     for (let i in temp_choice){
       for (let j in temp_choice[i])
-        price_list.querySelector('list-items').innerHTML += `<div>Ряд ${i}, место ${j}, цена 10р</div>`
+        price_list.querySelector('.list-items').innerHTML += `<div>Ряд ${i}, место ${j}, цена 10р</div>`
         price += 10
       }
-    price_list.querySelector('list-items').innerHTML += `Сумма ${price}р`
+    price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`
   }
   
   date_set_func(dates)
