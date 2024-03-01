@@ -63,7 +63,7 @@ function main_button_checkout(temp_choice) {
     if (Object.keys(temp_choice).length != 0) {
         if (!tg.MainButton.isVisible) {
             tg.enableClosingConfirmation();
-            tg.MainButton.text = "Продолжить";
+            tg.MainButton.text = 'Продолжить';
             tg.MainButton.onClick(make_price_list);
             tg.MainButton.show();
         }
@@ -235,7 +235,7 @@ function date_set_func(dates){
   // Календарь
   function make_calendar() {
     temp_choice = {};
-    main_button_checkout();
+    main_button_checkout(temp_choice);
     tg.BackButton.hide();
 
     change_view_mode("calendar_view");
