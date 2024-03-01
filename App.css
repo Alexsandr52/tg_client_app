@@ -210,12 +210,12 @@ body{
 
 .list-items div{
   width: 100%; 
-  min-height: 40px;
+  min-height: 30px;
   margin: 10px;
   border-radius: 5px;
 
-  padding: 10px;
-
+  padding-left: 10px;
+  display: flex;
   align-items: center;
 
   background-color: var(--tg-theme-button-color);
