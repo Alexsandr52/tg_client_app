@@ -171,7 +171,7 @@ function date_set_func(dates){
   const calendar_view = document.querySelector(".calendar_view");
   const time_view = document.querySelector(".time_view");
   const cinema_view = document.querySelector(".cinema_view");
-  const price_list = document.querySelector(".prise-list");
+  const price_list = document.querySelector(".price-list");
 
   // Обработчики для места
   function click_handler_second(e) {
@@ -217,7 +217,7 @@ function date_set_func(dates){
     calendar_view.style.display = "None";
 
     switch (box_name) {
-      case "price_list":
+      case "price-list":
         price_list.style.display = "block";
         break;
       case "cinema_view":
@@ -333,9 +333,9 @@ function date_set_func(dates){
 
   function make_price_list(){
     tg.MainButton.text = "las"
-    change_view_mode('prise-list');
+    change_view_mode('price-list');
     
-    const cart_body = document.querySelector('prise-list');
+    const cart_body = document.querySelector('price-list');
     cart_body.querySelector('.time_header_1').innerHTML = `${tg.initDataUnsafe.user.first_name}`;
 
     for (let i = 0; i < 30; i++){
