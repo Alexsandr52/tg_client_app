@@ -199,6 +199,13 @@ body{
   border-radius: 4px;
 }
 
+.list-items div{
+  min-width: 20px;
+  min-height: 20px;
+  background-color: aliceblue;
+  color: white;
+}
+
 button{
   background-color: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
