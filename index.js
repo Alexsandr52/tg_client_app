@@ -336,7 +336,7 @@ function date_set_func(dates){
     change_view_mode('price-list');
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input["time_choice"]} ${user_input["date_choice"]}`;
-    price_list.querySelector('list-items').innerHTML = ''
+    price_list.querySelector('.list-items').innerHTML = ''
 
     price = 0;
     for (let i in temp_choice){
