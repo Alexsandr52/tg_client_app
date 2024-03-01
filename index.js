@@ -332,6 +332,7 @@ function date_set_func(dates){
   }
 
   function make_price_list(){
+    tg.MainButton.text = "las"
     change_view_mode('prise-list');
     
     const cart_body = document.querySelector('prise-list');
