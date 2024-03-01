@@ -8,12 +8,6 @@ tg.MainButton.onClick(function() {make_price_list(temp_choice, user_input)});
 tg.SettingsButton.show();
 // tg.showAlert(tg.initDataUnsafe.user);
 
-function on_main_button_click(){
-    tg.MainButton.text = 'Оплатить'
-    tg.MainButton.onClick(send);
-
-    make_price_list();
-}
 
 // Окно оплаты 
 function send() {
@@ -333,7 +327,9 @@ function date_set_func(dates){
 
   function make_price_list(temp_choice, user_input){
 
+    tg.MainButton.hide();
     tg.MainButton.text = 'Оплатить';
+    tg.MainButton.show();
     tg.MainButton.onClick(send);
     change_view_mode('price-list');
     
