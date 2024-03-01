@@ -330,7 +330,7 @@ function date_set_func(dates){
     tg.MainButton.hide();
     tg.MainButton.text = 'Оплатить';
     tg.MainButton.show();
-    tg.MainButton.onClick(function(){send});
+    tg.MainButton.onClick(send);
     change_view_mode('price-list');
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input['time_choice']} ${user_input['date_choice']}`;
