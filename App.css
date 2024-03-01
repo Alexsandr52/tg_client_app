@@ -203,15 +203,17 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: start;
-
-  background-color: aquamarine;
+  padding: 10px;
+  margin: 10px;
+  
 }
 
 .list-items div{
-  min-width: 20px;
-  min-height: 20px;
-  background-color: aliceblue;
-  color: white;
+  width: 100%; 
+  min-height: 40px;
+  margin: 10px;
+  background-color: var(--tg-theme-header-bg-color);
+
 }
 
 button{
