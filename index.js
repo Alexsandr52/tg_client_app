@@ -336,10 +336,15 @@ function date_set_func(dates){
     change_view_mode('price-list');
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input["time_choice"]} ${user_input["date_choice"]}`;
+    price_list.querySelector('list-items').innerHTML = ''
 
-    for (let i = 0; i < 30; i++){
-      price_list.querySelector('list-items').innerHTML += `<div>${i}</div>`
-    }
+    price = 0;
+    for (let i in temp_choice){
+      for (let j in temp_choice[i])
+        price_list.querySelector('list-items').innerHTML += `<div>Ряд ${i}, место ${j}, цена 10р</div>`
+        price += 10
+      }
+    price_list.querySelector('list-items').innerHTML += `Сумма ${price}р`
   }
   
   date_set_func(dates)

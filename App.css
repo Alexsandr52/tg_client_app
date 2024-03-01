@@ -199,6 +199,14 @@ body{
   border-radius: 4px;
 }
 
+.list-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  background-color: aquamarine;
+}
+
 .list-items div{
   min-width: 20px;
   min-height: 20px;
