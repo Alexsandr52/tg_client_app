@@ -209,7 +209,7 @@ body{
 }
 
 .list-items div{
-  width: 100%; 
+  width: 80%; 
   min-height: 30px;
   margin: 10px;
   border-radius: 5px;
