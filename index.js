@@ -335,11 +335,10 @@ function date_set_func(dates){
     tg.MainButton.text = "las"
     change_view_mode('price-list');
     
-    let cart_body = document.querySelector('price-list');
-    cart_body.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input["time_choice"]} ${user_input["date_choice"]}`;
+    price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input["time_choice"]} ${user_input["date_choice"]}`;
 
     for (let i = 0; i < 30; i++){
-        cart_body.querySelector('list-items').innerHTML += `<div>${i}</div>`
+      price_list.querySelector('list-items').innerHTML += `<div>${i}</div>`
     }
   }
   
