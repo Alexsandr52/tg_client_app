@@ -325,23 +325,23 @@ function date_set_func(dates){
 
   function make_price_list(temp_choice, user_input){
 
-    tg.MainButton.text = 'Оплатить';
-    tg.MainButton.hide();
-    tg.MainButton.disable();
-    tg.MainButton.onClick(function() {send()});
+    
     change_view_mode('price-list');
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input['time_choice']} ${user_input['date_choice']}`;
     price_list.querySelector('.list-items').innerHTML = ''
-
+    
     price = 0;
     for (let i in temp_choice){
       for (let j in temp_choice[i]){
         price_list.querySelector('.list-items').innerHTML += `<div>Ряд ${i.replace('row_', '')}, место ${j}, цена 10р</div>`;
         price += 10;
-        }
       }
+    }
     price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`;
+    setTimeout(3000);
+    tg.MainButton.text = 'Оплатить';
+    tg.MainButton.onClick(send());
   }
 
   // date_set_func(dates);
