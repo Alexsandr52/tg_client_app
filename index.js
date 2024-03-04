@@ -341,7 +341,7 @@ function date_set_func(dates){
     price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`;
 
     tg.MainButton.text = 'Оплатить';
-    tg.MainButton.onClick(tg.MainButton.onClick(send()));
+    tg.MainButton.onClick(tg.MainButton.onClick(send));
     
   }
 
