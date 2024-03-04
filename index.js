@@ -28,30 +28,30 @@ function send() {
 }
 
 // Получение данных из таблиц на прод
-// {
-//     async function fetchData() {
-//         try {
-//           const response = await fetch(
-//             "https://d5diuud2nvnnoe0io4pd.apigw.yandexcloud.net/give"
-//           );
-//           const data = await response.json();
-//           return data;
-//         } catch (error) {
-//           console.error("Error fetching data:", error);
-//           throw error;
-//         }
-//     }
+{
+    async function fetchData() {
+        try {
+          const response = await fetch(
+            "https://d5diuud2nvnnoe0io4pd.apigw.yandexcloud.net/give"
+          );
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          throw error;
+        }
+    }
       
-//     (async () => {
-//     try {
-//         dates = await fetchData();
-//         date_set_func(dates);
-//         make_calendar();
-//     } catch (error) {
-//         console.error("Error:", error);
-//     }
-//     })();
-// }
+    (async () => {
+    try {
+        dates = await fetchData();
+        date_set_func(dates);
+        make_calendar();
+    } catch (error) {
+        console.error("Error:", error);
+    }
+    })();
+}
 
 function main_button_checkout(temp_choice) {
     if (Object.keys(temp_choice).length != 0) {
@@ -346,8 +346,8 @@ function date_set_func(dates){
       }
     price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`
   }
-  
-  
+
+  // date_set_func(dates);
+  // make_calendar();
 }
-date_set_func(dates);
-make_calendar();
+
