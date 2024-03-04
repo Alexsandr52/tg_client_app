@@ -68,7 +68,7 @@ function main_button_checkout(temp_choice) {
         }
     }
 }
-
+tg.showAlert("here")
 // До прода
 let dates = {
   "27.02.2024": {
@@ -326,6 +326,7 @@ function date_set_func(dates){
   }
 
   function make_price_list(temp_choice, user_input){
+    tg.showAlert("here 1")
 
     tg.MainButton.hide();
     tg.MainButton.text = 'Оплатить';
