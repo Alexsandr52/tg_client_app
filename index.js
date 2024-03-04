@@ -154,9 +154,10 @@ let dates = {
 
 
 function date_set_func(dates){
-    valid_days = Object.keys(dates).map((dateString) => {
-      const day = dateString.split(".")[0];
-      return day;
+  valid_days = Object.keys(dates).map((dateString) => {
+    const day = dateString.split(".")[0];
+    tg.showAlert(valid_days)
+    return valid_days;
     });
 }
 
@@ -228,6 +229,7 @@ function date_set_func(dates){
 
   // Календарь
   function make_calendar() {
+    tg.showAlert("here 2")
     temp_choice = {};
     main_button_checkout(temp_choice);
     tg.BackButton.hide();
@@ -326,7 +328,6 @@ function date_set_func(dates){
   }
 
   function make_price_list(temp_choice, user_input){
-    tg.showAlert("here 1")
 
     tg.MainButton.hide();
     tg.MainButton.text = 'Оплатить';
@@ -346,6 +347,6 @@ function date_set_func(dates){
     price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`
   }
   
-  date_set_func(dates)
+  date_set_func(dates);
   make_calendar();
 }
