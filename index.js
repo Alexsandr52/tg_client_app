@@ -4,7 +4,7 @@ let temp_choice = {};
 let dates = {};
 
 tg.MainButton.text = "Продолжить";
-tg.MainButton.onClick(function() {tg.offEvent('mainButtonClicked', function(){make_price_list(temp_choice, user_input)}), make_price_list(temp_choice, user_input)});
+tg.MainButton.onClick(function() {tg.offEvent('mainButtonClicked', function(){make_price_list(temp_choice, user_input)}); make_price_list(temp_choice, user_input)});
 // tg.SettingsButton.show();
 // tg.showAlert(tg.initDataUnsafe.user);
 
@@ -324,8 +324,8 @@ function date_set_func(dates){
   }
 
   function make_price_list(temp_choice, user_input){
+
     tg.MainButton.text = 'Оплатить';
-    tg.MainButton.offClick();
     tg.MainButton.onClick(function() {send});
     change_view_mode('price-list');
     
