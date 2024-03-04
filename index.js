@@ -44,9 +44,7 @@ function send() {
       
     (async () => {
     try {
-        tg.showAlert("here 1")
         dates = await fetchData();
-        tg.showAlert("here 2")
         date_set_func(dates);
         make_calendar();
     } catch (error) {
@@ -229,7 +227,6 @@ function date_set_func(dates){
 
   // Календарь
   function make_calendar() {
-    // tg.showAlert("here 2")
     temp_choice = {};
     main_button_checkout(temp_choice);
     tg.BackButton.hide();
@@ -328,11 +325,9 @@ function date_set_func(dates){
   }
 
   function make_price_list(temp_choice, user_input){
-
-    tg.MainButton.hide();
     tg.MainButton.text = 'Оплатить';
-    tg.MainButton.show();
-    tg.MainButton.onClick(send);
+    tg.MainButton.offClick()
+    tg.MainButton.onClick(function() {send()});
     change_view_mode('price-list');
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input['time_choice']} ${user_input['date_choice']}`;
