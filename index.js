@@ -5,7 +5,7 @@ let dates = {};
 
 tg.MainButton.text = "Продолжить";
 tg.MainButton.onClick(function() {make_price_list(temp_choice, user_input)});
-tg.SettingsButton.show();
+// tg.SettingsButton.show();
 // tg.showAlert(tg.initDataUnsafe.user);
 
 
@@ -58,7 +58,6 @@ function main_button_checkout(temp_choice) {
         if (!tg.MainButton.isVisible) {
             tg.enableClosingConfirmation();
             tg.MainButton.text = 'Продолжить';
-            tg.MainButton.onClick(make_price_list);
             tg.MainButton.show();
         }
     } else {
@@ -327,7 +326,7 @@ function date_set_func(dates){
   function make_price_list(temp_choice, user_input){
     tg.MainButton.text = 'Оплатить';
     tg.MainButton.offClick()
-    tg.MainButton.onClick(function() {send()});
+    tg.MainButton.onClick(send);
     change_view_mode('price-list');
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input['time_choice']} ${user_input['date_choice']}`;
