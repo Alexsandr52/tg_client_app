@@ -30,7 +30,7 @@ function send() {
 function save_data() {
   user_input['temp_choice'] = temp_choice;
   user_input['user_info'] = {'id': tg.initDataUnsafe.user.id, 'name': tg.initDataUnsafe.user.first_name}
-  fetch("https://d5dis6e9n8u7aslnm6tt.apigw.yandexcloud.net/paste", {
+  fetch("https://d5diuud2nvnnoe0io4pd.apigw.yandexcloud.net/paste", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
