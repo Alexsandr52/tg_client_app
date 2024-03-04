@@ -326,7 +326,8 @@ function date_set_func(dates){
   function make_price_list(temp_choice, user_input){
 
     tg.MainButton.text = 'Оплатить';
-    tg.MainButton.dis
+    tg.MainButton.hide();
+    tg.MainButton.disable();
     tg.MainButton.onClick(function() {send()});
     change_view_mode('price-list');
     
