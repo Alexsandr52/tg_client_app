@@ -27,6 +27,24 @@ function send() {
       });
 }
 
+function save_data() {
+  user_input['temp_choice'] = temp_choice;
+  user_input['user_info'] = {'id': tg.initDataUnsafe.user.id, 'name': tg.initDataUnsafe.user.first_name}
+  fetch("https://d5dis6e9n8u7aslnm6tt.apigw.yandexcloud.net/paste", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-save-bros-data": "true",
+    },
+    body: JSON.stringify(user_input),
+  })
+    .then((response) => response.json())
+    .then((data) => tg.showAlert(data))
+    .catch((error) => {
+      tg.showAlert("Ошибка сохранения данных: " + error);
+    });
+}
+
 // Получение данных из таблиц на прод
 {
     async function fetchData() {
@@ -324,9 +342,12 @@ function date_set_func(dates){
   }
 
   function make_price_list(temp_choice, user_input){
-
+    
+    tg.MainButton.text = 'Оплатить';
+    tg.MainButton.onClick(send);
     
     change_view_mode('price-list');
+    save_data();
     
     price_list.querySelector('.card_head').querySelector('h3').innerHTML = `${tg.initDataUnsafe.user.first_name} ${user_input['time_choice']} ${user_input['date_choice']}`;
     price_list.querySelector('.list-items').innerHTML = ''
@@ -340,8 +361,6 @@ function date_set_func(dates){
     }
     price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`;
 
-    tg.MainButton.text = 'Оплатить';
-    tg.MainButton.onClick(tg.MainButton.onClick(send));
     
   }
 
