@@ -83,7 +83,8 @@ body{
   justify-content: center;
   
   background-color: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
+  /* color: var(--tg-theme-button-text-color); */
+  color: aqua;
   
   border-radius: 4px;
   user-select: none;
@@ -120,7 +121,8 @@ body{
   justify-content: center;
   
   /* color */
-  color: var(--tg-theme-accent-text-color);
+  /* color: var(--tg-theme-accent-text-color); */
+  color: beige;
 }
 
 .time_view{
