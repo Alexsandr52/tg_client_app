@@ -39,7 +39,7 @@ function save_data() {
     body: JSON.stringify(user_input),
   })
     .then((response) => response.json())
-    .then((data) => tg.showAlert(data.message))
+    .then((data) => tg.showAlert(JSON.stringify(data)))
     .catch((error) => {
       tg.showAlert("Ошибка сохранения данных: " + error);
     });
