@@ -8,7 +8,6 @@ tg.MainButton.onClick(function() {make_price_list(temp_choice, user_input)});
 // tg.SettingsButton.show();
 // tg.showAlert(tg.initDataUnsafe.user);
 
-
 // Окно оплаты 
 function send() {
     user_input["temp_choice"] = temp_choice;
@@ -360,8 +359,6 @@ function date_set_func(dates){
       }
     }
     price_list.querySelector('.list-items').innerHTML += `Сумма ${price}р`;
-
-    
   }
 
   // date_set_func(dates);
